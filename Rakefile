@@ -101,6 +101,6 @@ task :init do
 
   File.open("serial", "w") {|f| f.puts "01"}
 
-  ENV['CN'] = "Puppet Labs Root Certificate Authority #{Time.now.strftime("%s")}"
+  ENV['CN'] = "Capsci Health Root Certificate Authority #{Time.now.strftime("%s")}"
   sh "openssl req -nodes -config openssl.cnf -days 1825 -x509 -newkey rsa:2048 -out ca_crt.pem -outform PEM"
 end

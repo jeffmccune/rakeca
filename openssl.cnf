@@ -101,17 +101,17 @@ localityName         = Locality Name (eg, city)
 localityName_default = Portland
 
 0.organizationName    = Organization Name (eg, company)
-0.organizationName_default  = Puppet Labs
+0.organizationName_default  = Capsci Health
 
 commonName = Common Name (eg, YOUR name)
 commonName_default = ${ENV::CN}
 commonName_max = 64
 
 organizationalUnitName         = Organizational Unit Name (eg, section)
-organizationalUnitName_default = Engineering
+organizationalUnitName_default = Operations
 
 emailAddress         = Email Address
-emailAddress_default = security@puppetlabs.com
+emailAddress_default = security@capscihealth.com
 emailAddress_max     = 40
 
 [ usr_cert ]
@@ -127,7 +127,7 @@ basicConstraints=CA:FALSE
 subjectKeyIdentifier=hash
 authorityKeyIdentifier=keyid,issuer:always
 
-nsCaRevocationUrl               = http://puppetlabs.com/ca.crl
+nsCaRevocationUrl               = http://capscihealth.com/ca.crl
 #nsBaseUrl
 #nsRevocationUrl
 #nsRenewalUrl
