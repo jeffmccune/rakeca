@@ -30,7 +30,7 @@ name_opt        = ca_default
 cert_opt        = ca_default
 
 default_crl_days= 365
-default_days    = 730
+default_days    = 1825
 # if need to be compatible with older software, use weaker md5
 default_md      = sha1
 # MSIE may need following set to yes?
