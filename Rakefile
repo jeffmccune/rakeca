@@ -91,5 +91,5 @@ task :init do
   File.open("serial", "w") {|f| f.puts "01"}
 
   ENV['CN'] = "OIS Root Certificate Authority #{Time.now.strftime("%s")}"
-  sh "openssl req -nodes -config openssl.cnf -days 1825 -x509 -newkey rsa:4096 -out ca_crt.pem -outform PEM"
+  sh "openssl req -nodes -config openssl.cnf -days 7300 -x509 -newkey rsa:4096 -out ca_crt.pem -outform PEM"
 end
