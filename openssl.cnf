@@ -62,7 +62,7 @@ emailAddress            = optional
 
 ####################################################################
 [ req ]
-default_bits            = 2048
+default_bits            = 4096
 default_keyfile         = ./private/ca_key.pem
 default_md              = sha1
 
@@ -100,7 +100,7 @@ localityName         = Locality Name (eg, city)
 localityName_default = Portland
 
 0.organizationName    = Organization Name (eg, company)
-0.organizationName_default  = Puppet Labs
+0.organizationName_default  = Open Infrastructure Services, LLC
 
 commonName = Common Name (eg, YOUR name)
 commonName_default = ${ENV::CN}
@@ -110,7 +110,7 @@ organizationalUnitName         = Organizational Unit Name (eg, section)
 organizationalUnitName_default = Engineering
 
 emailAddress         = Email Address
-emailAddress_default = security@puppetlabs.com
+emailAddress_default = security@openinfrastructure.co
 emailAddress_max     = 40
 
 [ usr_cert ]
@@ -126,7 +126,7 @@ basicConstraints=CA:FALSE
 subjectKeyIdentifier=hash
 authorityKeyIdentifier=keyid,issuer:always
 
-nsCaRevocationUrl               = http://puppetlabs.com/ca.crl
+nsCaRevocationUrl               = http://openinfrastructure.co/ca.crl
 #nsBaseUrl
 #nsRevocationUrl
 #nsRenewalUrl

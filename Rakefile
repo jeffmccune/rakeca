@@ -26,7 +26,7 @@ desc "Create a new CSR and private key"
 task :gencsr do
   abort "Please specify a cert name to generate using CN=mycert" unless ENV["CN"]
 
-  sh "openssl genrsa -out #{ENV['CN']}.key 2048"
+  sh "openssl genrsa -out #{ENV['CN']}.key 4096"
   sh "openssl req -out #{ENV['CN']}.csr -new -key #{ENV['CN']}.key -config openssl.cnf"
 end
 
@@ -90,6 +90,6 @@ task :init do
 
   File.open("serial", "w") {|f| f.puts "01"}
 
-  ENV['CN'] = "Puppet Labs Root Certificate Authority #{Time.now.strftime("%s")}"
-  sh "openssl req -nodes -config openssl.cnf -days 1825 -x509 -newkey rsa:2048 -out ca_crt.pem -outform PEM"
+  ENV['CN'] = "OIS Root Certificate Authority #{Time.now.strftime("%s")}"
+  sh "openssl req -nodes -config openssl.cnf -days 1825 -x509 -newkey rsa:4096 -out ca_crt.pem -outform PEM"
 end
